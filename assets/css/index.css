@@ -45,6 +45,7 @@
 body {
     font-family: var(--PoppinsRegular);
     background: var(--OffWhite);
+    color: var(--OffBlack);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -89,6 +90,7 @@ body {
     width: 6.5rem;
     border: 1px solid var(--LightGrey);
     border-radius: .35rem;
+    color: var(--OffBlack);
 }
 .card .form form .inputs .input input::-webkit-outer-spin-button,
 .card .form form .inputs .input input::-webkit-inner-spin-button {
@@ -96,6 +98,10 @@ body {
 }
 .card .form form .inputs .input input[type="number"] {
     -moz-appearance: textfield;
+}
+.card .form form .inputs .input input[type="number"]:focus {
+    outline: none;
+    border: 1px solid var(--Purple);
 }
 .card .form form button[type="submit"] {
     align-self: flex-end;
@@ -108,6 +114,10 @@ body {
     margin-left: 25rem;
     z-index: 1;
     cursor: pointer;
+    transition: .4s ease;
+}
+.card .form form button[type="submit"]:hover {
+    background: var(--OffBlack);
 }
 .card .form form::after {
     content: '';
@@ -130,4 +140,39 @@ body {
 }
 .card .results .result h1 span {
     color: var(--Purple);
+}
+@media only screen and (max-width:560px) {
+    .card {
+        /* padding: 1rem; */
+        padding: 5vw;
+    }
+    .card .form form {
+        gap: 1rem;
+        align-items: center;
+    }
+    .card .form form::after {
+        bottom: 1.5rem;
+    }
+    .card .form form .inputs {
+        flex-wrap: wrap;
+    }
+    .card .form form .inputs .input input {
+        max-width: 6.4rem;
+        width: 5rem;
+        padding: .5rem .7rem;
+        font-size: 1rem;
+    }
+    .card .form form button[type="submit"] {
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        align-self: center;
+    }
+    .card .form form button svg {
+        width: 1.5rem;
+    }
+    .card .results {
+        font-size: 1.5rem;
+        margin-block: 1rem;
+    }
 }
