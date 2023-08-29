@@ -1,0 +1,47 @@
+:root {
+    --Purple : hsl(259, 100%, 65%);
+    --LigthRed : hsl(0, 100%, 67%);
+    --White : hsl(0, 0%, 100%);
+    --OffWhite : hsl(0, 0%, 94%);
+    --LightGrey : hsl(0, 0%, 86%);
+    --SmokeGrey : hsl(0, 1%, 44%);
+    --OffBlack : hsl(0, 0%, 8%);
+    --PoppinsRegular : Poppins Regular; 
+    --PoppinsItalic : Poppins Italic; 
+    --PoppinsBold : Poppins Bold; 
+    --PoppinsBoldItalic : Poppins Bold Italic; 
+    --PoppinsExtrabold : Poppins Extrabold; 
+    --PoppinsExtraboldItalic : Poppins Extrabold Italic; 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Poppins Regular;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: Poppins Italic;
+    src: url(../fonts/Poppins-Italic.ttf);
+}
+@font-face {
+    font-family: Poppins Bold;
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: Poppins Bold Italic;
+    src: url(../fonts/Poppins-BoldItalic.ttf);
+}
+@font-face {
+    font-family: Poppins Extrabold;
+    src: url(../fonts/Poppins-ExtraBold.ttf);
+}
+@font-face {
+    font-family: Poppins Extrabold Italic;
+    src: url(../fonts/Poppins-ExtraBoldItalic.ttf);
+}
+body {
+    font-family: var(--PoppinsRegular);
+}
