@@ -44,4 +44,90 @@
 }
 body {
     font-family: var(--PoppinsRegular);
+    background: var(--OffWhite);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    background: var(--White);
+    padding: 3rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border-bottom-right-radius: 8rem;
+}
+.card .form form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.card .form form .inputs {
+    display: flex;
+    align-items: start;
+    /* justify-content: center; */
+    gap: 1rem;
+    color: var(--SmokeGrey);
+}
+.card .form form .inputs .input {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+.card .form form .inputs .input label {
+    text-transform: uppercase;
+    font-family: var(--PoppinsBold);
+    font-size: .6rem;
+    letter-spacing: .2rem;
+}
+.card .form form .inputs .input input {
+    font-family: var(--PoppinsBold);
+    padding: .5rem .7rem;
+    font-size: 1.3rem;
+    width: 6.5rem;
+    border: 1px solid var(--LightGrey);
+    border-radius: .35rem;
+}
+.card .form form .inputs .input input::-webkit-outer-spin-button,
+.card .form form .inputs .input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.card .form form .inputs .input input[type="number"] {
+    -moz-appearance: textfield;
+}
+.card .form form button[type="submit"] {
+    align-self: flex-end;
+    margin-left: 4rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 5rem;
+    border: none;
+    background: var(--Purple);
+    margin-left: 25rem;
+    z-index: 1;
+    cursor: pointer;
+}
+.card .form form::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: var(--LightGrey);
+    bottom: 2rem;
+    z-index: 0;
+}
+.card .form form button svg {
+    width: 1.8rem;
+    height: auto;
+}
+.card .results {
+    font-size: 2rem;
+    font-family: var(--PoppinsExtraboldItalic);
+    line-height: 1;
+    color: var(--OffBlack);
+}
+.card .results .result h1 span {
+    color: var(--Purple);
 }
