@@ -112,16 +112,21 @@ body {
     border: 1px solid var(--Purple);
 }
 .card .form form .inputs .input .required,
-.card .form form .inputs .input .invalid {
+.card .form form .inputs .input .invalid,
+.card .form form .inputs .input .invalidDate,
+.card .form form .inputs .input .futureDate {
     font-size: .7rem;
     color: var(--LigthRed);
     font-family: var(--PoppinsItalic);
     margin-block: .2rem;
     display: none;
     transition: .5s ease;
+    line-height: .7;
 }
 .card .form form .inputs .input .required.show,
-.card .form form .inputs .input .invalid.show {
+.card .form form .inputs .input .invalid.show,
+.card .form form .inputs .input .invalidDate.show,
+.card .form form .inputs .input .futureDate.show {
     display: block;
 }
 .card .form form button[type="submit"] {
