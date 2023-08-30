@@ -132,6 +132,92 @@ form.addEventListener("submit", (e) => {
             yearInput.classList.remove("error")
         }
         console.log("Difference: "+dateDiff)
+        console.log(new Date(dateDiff))
+        
+        // START STACKOVERFLOW CODE
+        // function dhm(t){
+        //     var cd = 24 * 60 * 60 * 1000,
+        //         ch = 60 * 60 * 1000,
+        //         d = Math.floor(t / cd),
+        //         h = Math.floor( (t - d * cd) / ch),
+        //         m = Math.round( (t - d * cd - h * ch) / 60000),
+        //         pad = function(n){ return n < 10 ? '0' + n : n; };
+        //   if( m === 60 ){
+        //     h++;
+        //     m = 0;
+        //   }
+        //   if( h === 24 ){
+        //     d++;
+        //     h = 0;
+        //   }
+        //   return [d, pad(h), pad(m)].join(':');
+        // }
+        
+        // console.log( dhm( dateDiff ) );
+        function dhm (ms) {
+            const days = Math.floor(ms / (24*60*60*1000));
+            const daysms = ms % (24*60*60*1000);
+            const hours = Math.floor(daysms / (60*60*1000));
+            const hoursms = ms % (60*60*1000);
+            const minutes = Math.floor(hoursms / (60*1000));
+            const minutesms = ms % (60*1000);
+            const sec = Math.floor(minutesms / 1000);
+            return days + "days :" + hours + "hours :" + minutes + "minutes :" + sec + "seconds";
+        }
+        console.log(dhm(dateDiff))
+        // END STACKOVERFLOW CODE
+
+        if (monthValue <= 7) {
+            if (monthValue % 2) {
+                console.log("impair month OK")
+                dayLabel.classList.remove("error")
+                monthLabel.classList.remove("error")
+                dayInput.classList.remove("error")
+                monthInput.classList.remove("error")
+                invalidDateText.classList.remove("show")
+            } else {
+                if (dayValue > 30) {
+                    console.log("need to be less")
+                    dayLabel.classList.add("error")
+                    monthLabel.classList.add("error")
+                    dayInput.classList.add("error")
+                    monthInput.classList.add("error")
+                    invalidDateText.classList.add("show")
+                } else {
+                    console.log("pair month ok")
+                    dayLabel.classList.remove("error")
+                    monthLabel.classList.remove("error")
+                    dayInput.classList.remove("error")
+                    monthInput.classList.remove("error")
+                    invalidDateText.classList.remove("show")
+                }
+            }
+        } else {
+            if (monthValue % 2) {
+                if (dayValue > 30) {
+                    console.log("need to be less II")
+                    dayLabel.classList.add("error")
+                    monthLabel.classList.add("error")
+                    dayInput.classList.add("error")
+                    monthInput.classList.add("error")
+                    invalidDateText.classList.add("show")
+                } else {
+                    console.log("impair month ok")
+                    dayLabel.classList.remove("error")
+                    monthLabel.classList.remove("error")
+                    dayInput.classList.remove("error")
+                    monthInput.classList.remove("error")
+                    invalidDateText.classList.remove("show")
+                }
+            } else {
+                console.log("pair month ok")
+                dayLabel.classList.remove("error")
+                monthLabel.classList.remove("error")
+                dayInput.classList.remove("error")
+                monthInput.classList.remove("error")
+                invalidDateText.classList.remove("show")
+            }
+        }
     }
     console.log("submited")
     console.log(validDate)
