@@ -82,6 +82,10 @@ body {
     font-family: var(--PoppinsBold);
     font-size: .6rem;
     letter-spacing: .2rem;
+    transition: .5s ease;
+}
+.card .form form .inputs .input label.error {
+    color: var(--LigthRed);
 }
 .card .form form .inputs .input input {
     font-family: var(--PoppinsBold);
@@ -91,6 +95,10 @@ body {
     border: 1px solid var(--LightGrey);
     border-radius: .35rem;
     color: var(--OffBlack);
+    transition: .5s ease;
+}
+.card .form form .inputs .input input.error {
+    border: 1px solid var(--LigthRed);
 }
 .card .form form .inputs .input input::-webkit-outer-spin-button,
 .card .form form .inputs .input input::-webkit-inner-spin-button {
@@ -102,6 +110,19 @@ body {
 .card .form form .inputs .input input[type="number"]:focus {
     outline: none;
     border: 1px solid var(--Purple);
+}
+.card .form form .inputs .input .required,
+.card .form form .inputs .input .invalid {
+    font-size: .7rem;
+    color: var(--LigthRed);
+    font-family: var(--PoppinsItalic);
+    margin-block: .2rem;
+    display: none;
+    transition: .5s ease;
+}
+.card .form form .inputs .input .required.show,
+.card .form form .inputs .input .invalid.show {
+    display: block;
 }
 .card .form form button[type="submit"] {
     align-self: flex-end;
@@ -145,6 +166,7 @@ body {
     .card {
         /* padding: 1rem; */
         padding: 5vw;
+        border-bottom-right-radius: 6rem;
     }
     .card .form form {
         gap: 1rem;
@@ -155,6 +177,7 @@ body {
     }
     .card .form form .inputs {
         flex-wrap: wrap;
+        gap: .7rem;
     }
     .card .form form .inputs .input input {
         max-width: 6.4rem;
