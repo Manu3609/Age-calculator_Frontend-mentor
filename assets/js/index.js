@@ -21,6 +21,10 @@ let dayValue = ""
 let monthValue = ""
 let yearValue = ""
 
+let dayResult = 0
+let monthResult = 0
+let yearResult = 0
+
 dayInput.addEventListener("change", () => {
     dayValue = dayInput.value
 })
@@ -129,15 +133,20 @@ form.addEventListener("submit", (e) => {
             const minutes = Math.floor(hoursms / (60000.015180000002147));
             const minutesms = ms % (60000.015180000002147);
             const sec = Math.floor(minutesms / 1000.0002530000000434);
+            yearResult = years
+            monthResult = months
+            dayResult = days
             return years + "years " + months + "months " + days + "days " + hours + "hours " + minutes + "minutes " + sec + "seconds";
         }
         console.log(msToDate(dateDiff))
-        // function changeResults (years, months, days) {
-        //     yearResultText.innerHTML = years
-        //     monthResultText.innerHTML = months
-        //     dayResultText.innerHTML = days
-        // }
-        
+        function changeResults (years, months, days) {
+            yearResultText.innerHTML = years
+            monthResultText.innerHTML = months
+            dayResultText.innerHTML = days
+        }
+        msToDate(dateDiff)
+        changeResults(yearResult, monthResult, dayResult)
+
         if (dateDiff < 0) {
             futureDateText.classList.add("show")
             dayLabel.classList.add("error")
