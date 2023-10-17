@@ -192,15 +192,13 @@ body {
     gap: .5rem;
 }
 .numbers.isGenerated {
-    transform: translateY(-83%);
+    transform: translateY(-82%);
     transition: 2s ease;
 }
 .numbers.months.isGenerated {
-    transform: translateY(-83%);
     transition: 1.5s ease;
 }
 .numbers.days.isGenerated {
-    transform: translateY(-83%);
     transition: 1.5s ease;
 }
 
