@@ -68,7 +68,6 @@ body {
 .card .form form .inputs {
     display: flex;
     align-items: start;
-    /* justify-content: center; */
     gap: 1rem;
     color: var(--SmokeGrey);
 }
@@ -164,12 +163,49 @@ body {
     line-height: 1;
     color: var(--OffBlack);
 }
+.card .results .result h1 {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    transition: .5s ease;
+}
 .card .results .result h1 span {
     color: var(--Purple);
+    transition: .5s ease;
 }
+
+.numberContainer {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 1em;
+    overflow: hidden;
+    width: fit-content;
+}
+.numbers {
+    font-size: inherit;
+    font-family: var(--ProductSansBold);
+    transition: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+.numbers.isGenerated {
+    transform: translateY(-83%);
+    transition: 2s ease;
+}
+.numbers.months.isGenerated {
+    transform: translateY(-83%);
+    transition: 1.5s ease;
+}
+.numbers.days.isGenerated {
+    transform: translateY(-83%);
+    transition: 1.5s ease;
+}
+
 @media only screen and (max-width:560px) {
     .card {
-        /* padding: 1rem; */
         padding: 5vw;
         border-bottom-right-radius: 6rem;
     }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Age Calculator - Fanantenana Emmanuel</title>
     <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
                 <div class="inputs">
                     <div class="input">
                         <label for="day" id="dayLabel">Day</label>
-                        <input type="number" name="day" id="day" placeholder="DD">
+                        <input type="number" name="day" id="day" placeholder="DD" autocomplete="off">
                         <span class="required" id="day">This field is required</span>
                         <span class="invalid" id="day">Must be a valid day</span>
                         <span class="invalidDate" id="day">Must be a valid date</span>
@@ -22,13 +22,13 @@
                     </div>
                     <div class="input">
                         <label for="month" id="monthLabel">Month</label>
-                        <input type="number" name="month" id="month" placeholder="MM">
+                        <input type="number" name="month" id="month" placeholder="MM" autocomplete="off">
                         <span class="required" id="month">This field is required</span>
                         <span class="invalid" id="month">Must be a valid month</span>
                     </div>
                     <div class="input">
                         <label for="year" id="yearLabel">Year</label>
-                        <input type="number" name="year" id="year" placeholder="YYYY">
+                        <input type="number" name="year" id="year" placeholder="YYYY" autocomplete="off">
                         <span class="required" id="year">This field is required</span>
                         <span class="invalid" id="year">Must be in the past</span>
                     </div>
@@ -40,13 +40,43 @@
         </div>
         <div class="results">
             <div class="result">
-                <h1><span class="yearsResult">- -</span> years</h1>
+                <h1>
+                    <div class="yearsResult numberContainer">
+                        <div class="years numbers">
+                            <span class="yearsNumber number">- -</span>
+                            <span class="yearsNumber number">- -</span>
+                            <span class="yearsNumber number">- -</span>
+                            <span class="yearsNumber number">- -</span>
+                            <span class="yearsNumber number">- -</span>
+                        </div>
+                    </div> years
+                </h1>
             </div>
             <div class="result">
-                <h1><span class="monthsResult">- -</span> months</h1>
+                <h1>
+                    <div class="monthsResult numberContainer">
+                        <div class="months numbers">
+                            <span class="number monthNumber">- -</span>
+                            <span class="number monthNumber">- -</span>
+                            <span class="number monthNumber">- -</span>
+                            <span class="number monthNumber">- -</span>
+                            <span class="number monthNumber">- -</span>
+                        </div>
+                    </div> months
+                </h1>
             </div>
             <div class="result">
-                <h1><span class="daysResult">- -</span> days</h1>
+                <h1>
+                    <div class="daysResult numberContainer">
+                        <div class="days numbers">
+                            <span class="number daysNumber">- -</span>
+                            <span class="number daysNumber">- -</span>
+                            <span class="number daysNumber">- -</span>
+                            <span class="number daysNumber">- -</span>
+                            <span class="number daysNumber">- -</span>
+                        </div>
+                    </div> days
+                </h1>
             </div>
         </div>
     </div>
